@@ -9,8 +9,15 @@ import { CheckoutForm } from '../types';
 import styles from './Checkout.module.scss';
 
 const INITIAL_FORM: CheckoutForm = {
-  firstName: '', lastName: '', phone: '', email: '',
-  address: '', city: 'Bakı', note: '', couponCode: ''
+  firstName: '',
+  lastName: '',
+  phone: '',
+  email: '',
+  address: '',
+  city: 'Bakı',
+  note: '',
+  couponCode: '',
+  paymentMethod: 'cash_on_delivery', // 🔥 düzgün dəyər
 };
 
 const Checkout: React.FC = () => {
