@@ -1,0 +1,35 @@
+{
+  "name": "otb-frontend",
+  "version": "1.0.0",
+  "description": "OTB.az Online Tikinti Bazarı Frontend",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.0",
+    "axios": "^1.6.2",
+    "@reduxjs/toolkit": "^2.0.1",
+    "react-redux": "^9.0.4",
+    "react-hot-toast": "^2.4.1",
+    "react-helmet-async": "^2.0.4",
+    "framer-motion": "^10.16.16",
+    "swiper": "^11.0.5",
+    "react-icons": "^4.12.0",
+    "react-rating-stars-component": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "sass": "^1.69.7",
+    "eslint": "^8.56.0"
+  }
+}

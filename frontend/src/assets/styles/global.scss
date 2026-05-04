@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ===== BRAND COLORS — Açıq, professional, qırmızı əsaslı ===== */
+  --red: #C8102E;
+  --red-dark: #A00C24;
+  --red-light: #FF2D4A;
+  --red-bg: #FFF5F7;
+  --red-border: #FFD6DC;
+
+  /* Neutrals — ağ əsaslı, açıq ton */
+  --charcoal: #1C1C1E;
+  --slate: #3A3A3C;
+  --bg: #F5F5F7;
+  --bg-2: #EFEFEF;
+  --surface: #FFFFFF;
+  --border: #E5E5EA;
+  --border-strong: #C7C7CC;
+
+  /* Text */
+  --text: #1C1C1E;
+  --text-2: #3A3A3C;
+  --text-3: #6C6C70;
+  --text-4: #AEAEB2;
+
+  /* Semantic */
+  --success: #1A8A3C;
+  --success-bg: #DCFCE7;
+  --warning: #D97706;
+  --info: #0A5BC4;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-main: 'Barlow', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Radius */
+  --r-sm: 4px;
+  --r: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+
+  /* Shadows — yüngül, açıq */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.07);
+  --shadow: 0 4px 16px rgba(0,0,0,0.09);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.12);
+  --shadow-red: 0 4px 20px rgba(200,16,46,0.25);
+
+  --transition: 0.18s ease;
+  --transition-md: 0.26s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+.container { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== SKELETON ===== */
+.skeleton {
+  background: linear-gradient(90deg, #EBEBEB 25%, #F5F5F5 50%, #EBEBEB 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: var(--r);
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 5px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }

@@ -1,0 +1,106 @@
+/* ===== ANNOUNCEMENT BAR ===== */
+.announcement {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-family: var(--font-main);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  strong { font-weight: 800; }
+  a { color: white; text-decoration: underline; text-underline-offset: 2px; opacity: 0.85; &:hover { opacity: 1; } }
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.headerInner {
+  max-width: 1320px; margin: 0 auto; padding: 0 20px;
+  height: 68px; display: flex; align-items: center; gap: 20px;
+}
+
+/* ===== LOGO ===== */
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.logoMark {
+  width: 44px; height: 44px; background: var(--red); border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  svg { width: 26px; height: 26px; }
+}
+
+.logoText { display: flex; flex-direction: column; line-height: 1; }
+.logoName { font-family: var(--font-display); font-weight: 900; font-size: 20px; color: var(--charcoal); letter-spacing: -0.02em; text-transform: uppercase; }
+.logoSub { font-size: 10px; color: var(--text-3); font-weight: 600; font-family: var(--font-main); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 1px; }
+
+/* ===== SEARCH ===== */
+.search { flex: 1; max-width: 580px; margin: 0 16px; }
+
+.searchInner {
+  display: flex; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r); overflow: hidden; transition: all var(--transition);
+  &:focus-within { border-color: var(--red); background: white; box-shadow: 0 0 0 3px rgba(200,16,46,0.08); }
+  input { flex: 1; padding: 10px 14px; font-size: 14px; font-family: var(--font-body); background: transparent; border: none; outline: none; color: var(--text); min-width: 0; &::placeholder { color: var(--text-4); } }
+  button { padding: 0 20px; background: var(--red); color: white; font-family: var(--font-main); font-weight: 700; font-size: 13px; display: flex; align-items: center; gap: 6px; transition: background var(--transition); flex-shrink: 0; &:hover { background: var(--red-dark); } svg { font-size: 15px; } }
+}
+
+/* ===== ACTIONS ===== */
+.actions { display: flex; align-items: center; gap: 4px; margin-left: auto; flex-shrink: 0; }
+
+.actionBtn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 8px 12px; border-radius: var(--r); color: var(--text-2);
+  font-size: 10px; font-family: var(--font-main); font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase; position: relative;
+  transition: all var(--transition); cursor: pointer;
+  svg { font-size: 20px; }
+  &:hover { background: var(--red-bg); color: var(--red); }
+}
+
+.cartBtn {
+  background: var(--red) !important; color: white !important; border-radius: var(--r) !important;
+  &:hover { background: var(--red-dark) !important; color: white !important; }
+}
+
+.actionBadge {
+  position: absolute; top: 4px; right: 5px;
+  background: var(--charcoal); color: white;
+  font-size: 10px; font-weight: 800; min-width: 18px; height: 18px;
+  border-radius: 9px; display: flex; align-items: center; justify-content: center;
+  padding: 0 4px; font-family: var(--font-main); border: 2px solid white;
+}
+
+.cartBtn .actionBadge { background: white; color: var(--red); }
+
+/* ===== NAV ===== */
+.nav { background: white; border-bottom: 2px solid var(--border); }
+
+.navInner {
+  max-width: 1320px; margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center; overflow-x: auto;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.allCatsBtn {
+  display: flex; align-items: center; gap: 8px; padding: 0 18px; height: 44px;
+  color: white; font-family: var(--font-main); font-weight: 700; font-size: 13px;
+  letter-spacing: 0.03em; white-space: nowrap; background: var(--red);
+  transition: background var(--transition); flex-shrink: 0;
+  &:hover { background: var(--red-dark); }
+}
+
+.navLink {
+  display: flex; align-items: center; gap: 6px; padding: 0 14px; height: 44px;
+  color: var(--text-2); font-family: var(--font-main); font-size: 13px; font-weight: 600;
+  white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -2px;
+  transition: all var(--transition); flex-shrink: 0;
+  &:hover { color: var(--red); }
+  &.active { color: var(--red); border-bottom-color: var(--red); }
+  .navIcon { font-size: 14px; }
+}

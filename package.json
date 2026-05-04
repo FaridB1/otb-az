@@ -1,0 +1,12 @@
+{
+  "name": "otb-az",
+  "version": "1.0.0",
+  "description": "OTB.az Online Tikinti Bazarı — Full Stack E-Commerce",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install",
+    "seed": "cd backend && npm run seed",
+    "build": "cd frontend && npm run build"
+  }
+}

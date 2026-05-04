@@ -1,0 +1,43 @@
+.page { }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px;
+  h1 { font-family: var(--font-display); font-weight: 900; font-size: 28px; text-transform: uppercase; letter-spacing: -0.02em; } }
+
+.backBtn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border: 1.5px solid var(--border); border-radius: var(--r); font-size: 13px; font-weight: 600; font-family: var(--font-main); color: var(--text-2); transition: all var(--transition);
+  &:hover { border-color: var(--charcoal); color: var(--text); } }
+
+.form { }
+.grid { display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; @media (max-width: 900px) { grid-template-columns: 1fr; } }
+.main { display: flex; flex-direction: column; gap: 16px; }
+.side { display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: white; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px; overflow: hidden;
+  h2 { font-family: var(--font-display); font-weight: 800; font-size: 16px; text-transform: uppercase; letter-spacing: -0.01em; color: var(--text); margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--border); } }
+
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; &:last-child { margin-bottom: 0; }
+  label { font-size: 12px; font-weight: 700; color: var(--text-2); font-family: var(--font-main); text-transform: uppercase; letter-spacing: 0.04em; }
+  input, select, textarea { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: var(--r); font-size: 13px; font-family: var(--font-body); color: var(--text); background: var(--bg); outline: none; transition: all var(--transition); resize: vertical;
+    &:focus { border-color: var(--charcoal); background: white; box-shadow: 0 0 0 3px rgba(28,28,30,0.05); } }
+  textarea { min-height: 100px; }
+}
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.toggle { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--bg); cursor: pointer; font-size: 13px; font-weight: 500; color: var(--text-2); font-family: var(--font-main); &:last-child { border-bottom: none; }
+  input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--charcoal); cursor: pointer; } }
+
+.uploadBtn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 11px; border: 1.5px dashed var(--border-strong); border-radius: var(--r); color: var(--text-3); font-size: 13px; font-weight: 600; font-family: var(--font-main); transition: all var(--transition); cursor: pointer;
+  &:hover { border-color: var(--charcoal); color: var(--text); background: var(--bg); } }
+
+.imgGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.imgThumb { position: relative; aspect-ratio: 1; border-radius: var(--r); overflow: hidden; border: 1px solid var(--border);
+  img { width: 100%; height: 100%; object-fit: cover; }
+  .removeImg { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; background: rgba(0,0,0,0.6); color: white; border-radius: 50%; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: background var(--transition); &:hover { background: var(--red); } } }
+
+.specRow { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: center; margin-bottom: 8px; }
+.removeSpec { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: var(--r); color: var(--text-4); font-size: 16px; border: 1px solid var(--border); transition: all var(--transition); &:hover { background: #FFF0F2; border-color: var(--red); color: var(--red); } }
+.addSpecBtn { width: 100%; padding: 9px; border: 1.5px dashed var(--border); border-radius: var(--r); font-size: 12px; font-weight: 700; font-family: var(--font-main); color: var(--text-4); transition: all var(--transition); margin-top: 4px;
+  &:hover { border-color: var(--charcoal); color: var(--text); } }
+
+.submitBtn { width: 100%; padding: 13px; background: var(--charcoal); color: white; border-radius: var(--r); font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: 0.02em; text-transform: uppercase; transition: all var(--transition);
+  &:hover { background: var(--red); }
+  &:disabled { opacity: 0.6; cursor: not-allowed; } }
